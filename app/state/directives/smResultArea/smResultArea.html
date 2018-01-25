@@ -1,0 +1,10 @@
+﻿
+    <div class="state-detail-remaining-space">
+        <div class="label">Result:</div>
+        <div class="result" sm-state-to-class={{item.state}}>{{item.detail.result}}</div>
+        <div class="action" sm-state-to-class={{item.state}}>{{item.detail.action}}</div>
+        <div class="rectangle" sm-state-to-class={{item.state}}></div>
+        <div class="deployed" sm-state-to-class={{item.state}}><div class="icon icon-search" ></div><div class="text">{{item.detail.deployed}}</div></div>
+        <div class="issuelist" sm-state-to-class={{item.state}}>{{item.detail.issuelist}}</div>
+        <select sm-state-to-class={{item.state}} ng-init="selected = item.detail.mergedbuildlist[0]"  ng-model="selected" data-ng-options="o for o in item.detail.mergedbuildlist"></select>
+</div>

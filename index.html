@@ -1,0 +1,85 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+
+    <meta charset="utf-8">
+    <title>Crossover State Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" href="styles/lib/toastr.css" />
+    <link rel="stylesheet" href="styles/lib/loading-bar.css" />
+    <link href="styles/lib/animate.css" rel="stylesheet" />
+    <link href="styles/style.css" rel="stylesheet" />
+    <link href="styles/customIcons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/app.css">
+
+</head>
+<body data-ng-controller="indexCtrl" ng-cloak>
+
+    <ul>
+        <li><a href="#/home">Home</a></li>
+        <li><a href="#/state">States</a></li>
+    </ul>
+
+    <div class="dissolve-animation">
+        <ui-view class="shuffle-animation" ng-cloak>
+        </ui-view>
+
+    </div>
+
+    
+
+    <script src="Scripts/jquery.js"></script>
+    <script src="Scripts/jquery.md5.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/toastr.js"></script>
+    <script src="Scripts/angular-animate.js"></script>
+    <script src="Scripts/q.js"></script>
+    <script src="Scripts/loading-bar.js"></script>
+    <script src="Scripts/d3.js"></script>
+    <script src="Scripts/angular-ui-router.js"></script>
+
+    <!-- include source files here... -->
+    <script src="app/app.js"></script>
+    <script src="app/blocks/router/router.module.js"></script>
+    <script src="app/blocks/router/router-helper.provider.js"></script>
+
+
+    <script src="app/core/core.module.js"></script>
+
+
+    <script src="app/blocks/diagnostics/diagnostics.module.js"></script>
+    <script src="app/blocks/diagnostics/diagnostics.decorator.js"></script>
+
+    <script src="app/blocks/exception/exception.module.js"></script>
+    <script src="app/blocks/exception/exception-handler.provider.js"></script>
+    <script src="app/blocks/exception/exception.js"></script>
+
+    <script src="app/blocks/logger/logger.module.js"></script>
+    <script src="app/blocks/logger/logger.js"></script>
+
+    <script src="app/core/index.js"></script>
+    <script src="app/core/home.js"></script>
+    <script src="app/core/config.js"></script>
+    <script src="app/core/constants.js"></script>
+    <script src="app/core/core.route.js"></script>
+
+    <!--state -->
+    <script src="app/state/state.module.js"></script>
+    <script src="app/state/state.route.js"></script>
+    <script src="app/state/states.data.js"></script>
+    <script src="app/state/state.js"></script>
+    <script src="app/state/directives/smStateItem/smStateItem.js"></script>
+    <script src="app/state/directives/smResultArea/smResultArea.js"></script>
+    <script src="app/state/directives/smMetricsReport/smMetricsReport.js"></script>
+    <script src="app/state/directives/smUnitTestReport/smUnitTestReport.js"></script>
+    <script src="app/state/directives/smFuctionTestReport/smFuctionTestReport.js"></script>
+    <script src="app/state/directives/smBuildReport/smBuildReport.js"></script>
+    <script src="app/state/directives/smDecoratorDirective/smCoverageBar.js"></script>
+    <script src="app/state/directives/smDecoratorDirective/smPieChart.js"></script>
+    <script src="app/state/directives/smDecoratorDirective/smStatus.js"></script>
+    <script src="app/state/directives/smDecoratorDirective/smStateToClass.js"></script>
+
+</body>
+</html>

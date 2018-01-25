@@ -1,0 +1,49 @@
+
+/*@import url('https://fonts.googleapis.com/css?family=Merriweather|Bree+Serif');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');*/
+
+/*@import "lib/bourbon/bourbon";
+@import "lib/neat/neat";
+@import "lib/base/base";*/
+
+$bgcolor: white;
+
+$detailprogresssuccesscolor: #C7E0B6;
+$detailprogressfailurecolor: #F6CBB0;
+$summaryprogresssuccesscolor: #507E3D;
+$summaryprogressfailurecolor: #C80112;
+$summaryprogresspendingcolor : #D9D7D8;
+
+
+$chartgood: #6EA94F;
+$chartbad: #C66728;
+    
+$successcolor : #50803B;
+$runningcolor : #679EDE;
+$failcolor :  #CA021E; 
+$pendingcolor : #BABBBD;
+
+$arrowpointrightcolor : #FEE48F;
+$arrowpoitupcolor: #50803B;
+$arrowpoitdowncolor: #CB0815;
+
+$bigfont: 32px;
+$smallfont: 8px;
+$blackText: #000;
+
+$actiontakentext: 28px;
+$resulttext: 13px;
+
+/*$color: lighten($lightgray, 30);*/
+
+$font-primary: Merriweather, serif;
+$font-secondary: Bree Serif, serif;
+
+$small: .7em;
+$medium: 1em; 
+$large: 1.5em; 
+
+@font-face {
+    font-family: 'right-arrow';
+    src: url('../client/image/right-arrow.svg') format('svg');
+}

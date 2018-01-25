@@ -1,0 +1,37 @@
+@import "../../../../styles/lib/bourbon/bourbon";
+@import "../../../../styles/lib/neat/neat";
+@import "../../../../styles/variables";
+
+div.reportheader{
+    margin-bottom: 1.6rem; font-weight: bold;
+}
+
+div.buildImage {
+    @include span-columns(12);
+    @include outer-container;
+     
+
+    .debug, .release {
+        .buildtext{
+            margin: 1rem auto;
+        }
+
+        @include span-columns(6);
+        color: $runningcolor;
+        &.pendbuild{
+         color: $pendingcolor;
+         }
+        [class^="icon-"], [class*=" icon-"] {
+         font-size: 75px;
+           }
+    }
+
+}
+
+      div.sm-build-report{
+       .text{
+            margin: 1.5rem, auto;
+            color: $blackText;
+        }
+     }
+

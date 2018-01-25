@@ -1,0 +1,50 @@
+
+@import "../../../../styles/variables";
+@import "../../../../styles/lib/neat/neat";
+
+div.sm-metrics-report {
+    .metricArrows {
+         [class^="icon-"], [class*=" icon-"] {
+           font-size: 70px;
+           }
+
+            .text{
+                color: $blackText;
+                margin-top:18px;
+            }
+          .layer1 {
+            margin-top: -1rem;
+            margin-bottom: 2.5rem;
+            @include row;
+            
+            .value {
+                margin-top: -40px;
+                font-size: $large;
+                 color: white;
+            }
+
+            .icon-up-bold {
+                 color: $successcolor;
+            }
+            .icon-down-bold{
+                  color: $failcolor;
+            }
+        }
+
+         .layer2 {
+             margin-top: -2.3rem;
+            @include row;
+            .value {
+                margin-top: -45px;
+                color: $blackText;
+                font-size: $large;
+             }
+            .icon-right-bold {
+                 color: $arrowpointrightcolor;
+            }
+            .icon-left-bold{
+                  color: $failcolor;
+            }
+        }
+    }
+}

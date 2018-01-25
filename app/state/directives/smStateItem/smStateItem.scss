@@ -1,0 +1,85 @@
+
+
+@import "../../../../styles/variables";
+@import "../../../../styles/lib/bourbon/bourbon";
+@import "../../../../styles/lib/neat/neat";
+
+div.rowsummary{
+     @include outer-container;
+     margin-bottom: 1.4rem;
+}
+
+
+   div.sm-state-item{
+
+       div.image{
+     [class^="icon-"], [class*=" icon-"] {
+           font-size: 25px;
+    }
+}
+        
+      &.changelist{text-align:left;}  
+       span{
+        &.metrics{ color: shade($bgcolor, 50);}
+        &.build{color: shade($bgcolor, 50);}
+        &.unit-test{color: shade($bgcolor, 50);}
+        &.functional-test{color: shade($bgcolor, 50);}
+        }
+       cursor: pointer;
+
+        div.rowdetail {
+        @include background-image(linear-gradient(top, tint($failcolor, 90), $bgcolor));
+        border-color: $failcolor;
+
+        div.goodvalue {
+            border-color: $successcolor;
+            @include background-image(linear-gradient(top, tint($successcolor, 90), $bgcolor));
+
+            //Box  Shadow
+            -moz-box-shadow: $successcolor 4px 4px inset;
+            -webkit-box-shadow:$successcolor 4px 4px 10px;
+            box-shadow: $successcolor 4px 4px 10px;
+        }
+          margin: 1.4rem 1rem;
+
+
+     }
+
+        .tableprogressbox{
+            height: 2rem;
+            .svg{
+                height: 1.4rem;
+            }
+        }
+       
+
+   }
+
+   div.sm-state-item.selected{
+        padding-top: 1rem;
+        padding-bottom: 2rem;
+        height:18rem;
+        span{
+        &.metrics{ color: $bgcolor;}
+        &.build{color: $bgcolor;}
+        &.unit-test{color: $bgcolor;}
+        &.functional-test{color: $bgcolor;}
+        }
+        cursor: default; 
+   }
+   
+    .failed{ @include background-image(linear-gradient(left, tint($failcolor   , 90%), $bgcolor)); svg{fill:$failcolor;} .whiteSpace {color: tint($failcolor, 90%);}}
+   .success{ @include background-image(linear-gradient(left, tint($successcolor, 90%), $bgcolor)); svg{fill:$successcolor;} .whiteSpace {color: tint($successcolor, 90%);}}
+   .running{ @include background-image(linear-gradient(left, tint($runningcolor, 90%), $bgcolor)); svg{fill:$runningcolor;} .whiteSpace {color: tint($runningcolor, 90%);}}
+   .pending{ @include background-image(linear-gradient(left, tint($pendingcolor, 90%), $bgcolor)); svg{fill:$pendingcolor;} .whiteSpace {color: tint($pendingcolor, 90%);}}
+
+
+     div.sm-build-report, div.sm-metrics-report, div.sm-fuction-test-report,  div.sm-unit-test-report {
+               height:12rem;
+            padding:.4rem;
+            border-width: 2px;
+            border-style: solid ;
+            cursor: pointer;
+    }
+
+     

@@ -1,0 +1,49 @@
+
+
+
+@import "../../styles/variables";
+
+   .reportheader{text-align:left; font-size:1rem; font-weight:bold;}
+
+    .failed{ border-color: $failcolor; border: solid;    color: $failcolor;    }
+   .success{ border-color: $successcolor; border: solid; color: $successcolor; }
+   .running{ border-color: $runningcolor; border: solid; color: $runningcolor; }
+   .pending{ border-color: $pendingcolor; border: solid; color: $pendingcolor; }
+
+   #headings{
+    font-family: $font-secondary;
+    font-weight: bold;
+}
+
+ div{
+     .sm-state-item.header, .sm-state-item{
+        padding: .5rem 1rem;
+        text-align: center;
+        vertical-align: central;
+        border-width: 2px;
+        margin-top: 0.7rem;
+        height: 2rem;
+        display: block;
+        
+    }
+
+    .sm-state-item.header{
+          margin-bottom: 0rem;
+          color: $blackText;
+          cursor: default; 
+      }
+}
+
+        .header{
+                .tableprogressbox {
+                    &.metrics{
+                    margin-left: -1.6rem;
+                    padding-left:0;
+                    }
+                    /*&.build{
+                    margin-left: -.5rem;
+                    padding-left:0;
+                    }*/
+                } 
+            }
+        

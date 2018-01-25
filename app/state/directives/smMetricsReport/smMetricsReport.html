@@ -1,0 +1,52 @@
+﻿
+
+<div class="sm-metrics-report innerbox" ng-class="{'goodvalue': (int.parse(item.detail.metrics.test) > 0 && int.parse(item.detail.metrics.maintainability) > 0)}">
+    <div class="reportheader">Metrics</div>
+    <div class="metricArrows">
+        <div class="layer1">
+            <div class="quadbox test" ng-if="item.detail.metrics.test <= 0">
+                <div class="icon icon-down-bold" ></div>
+                <div class="value">{{item.detail.metrics.test}}</div>
+                <div class="text">Test</div>
+            </div>
+            <div class="quadbox test" ng-if="item.detail.metrics.test > 0">
+                <div class="icon icon-up-bold"></div>
+                <div class="value">{{item.detail.metrics.test}}</div>
+                <div class="text">Test</div>
+            </div>
+            <div class="quadbox maintainability" ng-if="item.detail.metrics.maintainability <= 0">
+                <div class="icon icon-down-bold" ></div>
+                <div class="value">{{item.detail.metrics.maintainability}}</div>
+                <div class="text">Maintainability</div>
+            </div>
+            <div class="quadbox maintainability" ng-if="item.detail.metrics.maintainability > 0">
+                <div class="icon icon-up-bold"></div>
+                <div class="value">{{item.detail.metrics.maintainability}}</div>
+                <div class="text">Maintainability</div>
+            </div>
+        </div>
+        <div class="layer2">
+            <div class="quadbox security" ng-if="item.detail.metrics.security > 0">
+                <div class="icon icon-right-bold"></div>
+                <div class="value">{{item.detail.metrics.security}}</div>
+                <div class="text">Security</div>
+            </div>
+            <div class="quadbox security" ng-if="item.detail.metrics.security <= 0">
+                <div class="icon icon-left-bold"></div>
+                <div class="value">{{item.detail.metrics.security}}</div>
+                <div class="text">Security</div>
+            </div>
+            <div class="quadbox workmanship" ng-if="item.detail.metrics.workmanship > 0">
+                <div class="icon icon-right-bold"></div>
+                <div class="value">{{item.detail.metrics.workmanship}}</div>
+                <div class="text">Workmanship</div>
+            </div>
+            <div class="quadbox workmanship" ng-if="item.detail.metrics.workmanship <= 0">
+                <div class="icon icon-left-bold"></div>
+                <div class="value">{{item.detail.metrics.workmanship}}</div>
+                <div class="text">Workmanship</div>
+            </div>
+        </div>
+    </div>
+</div>
+

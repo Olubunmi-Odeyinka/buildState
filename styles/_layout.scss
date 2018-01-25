@@ -1,0 +1,56 @@
+@import "lib/bourbon/bourbon";
+@import "lib/neat/neat";
+
+        section {
+           @include outer-container;
+         } 
+                      
+        div{
+            .changelist {
+                @include span-columns(2);
+                .text{
+                    @include span-columns(9);
+                }
+               [class^="icon-"], [class*=" icon-"] {
+                    margin-top: -.4rem;
+                    @include span-columns(3);
+                }      
+            }       
+            .owner {
+                @include span-columns(1);
+            }      
+               
+            .timestamp {
+                @include span-columns(2.5);
+            }    
+                    
+            .state {
+                @include span-columns(1.5);
+            }
+                                
+            .tableprogressbox {
+                @include span-columns(1.23);
+                margin-top: -.45rem;            
+            } 
+               
+                                                        
+       .block { 
+              
+            @include outer-container; 
+            @include span-columns(2.4);
+             
+            .img{
+                    @include span-columns(6);
+                }
+           .quadbox {
+               @include span-columns(5.8);
+            }       
+           .quadboxsmall {
+               @include span-columns(4.5)
+            }     
+           .quadboxbig {
+               @include span-columns(7.2)
+            } 
+    }
+}  
+              

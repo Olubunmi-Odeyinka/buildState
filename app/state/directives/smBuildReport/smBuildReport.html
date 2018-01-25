@@ -1,0 +1,17 @@
+﻿<div class="sm-build-report" ng-class="{'goodvalue': (!!item.detail.build.debuged && !!item.detail.build.released)}">
+    <div class="reportheader">Build</div>
+    <div class="buildImage">
+        <div class="debug" ng-class="{'pendbuild': !item.detail.build.debuged}">
+            <div class="icon icon-personal-computer" ></div>
+            <div class="buildtext">Debug</div>
+        </div>
+        <div class="release" ng-class="{'pendbuild': !item.detail.build.released}">
+            <div class="icon icon-personal-computer" ></div>
+            <div class="buildtext" >Release</div>
+        </div>
+        
+    </div>
+    <div class="text" ng-if="!!item.detail.build.debuged && !!item.detail.build.released">{{item.detail.build.buildTime}}</div>
+    <div class="text" ng-if="!item.detail.build.debuged && !item.detail.build.released">Pending/Failed</div>
+    
+</div>

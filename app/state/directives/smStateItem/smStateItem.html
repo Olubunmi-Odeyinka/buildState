@@ -1,0 +1,24 @@
+﻿<div class="sm-state-item" ng-click="openDetails(item)" sm-status={{item.state}} ng-class="{'selected': activeViewID === item.changelist || activeViewID === item.build}">
+    <div class="rowsummary">
+        <div class="changelist">
+            <div class="image">
+                    <div class="icon icon-firewall2" ng-if="item.changelist"></div>
+                    <div class="icon icon-personal-computer" ng-if="item.build"></div>
+            </div> <div class="text">{{item.build}}{{item.changelist}}</div>
+        </div>
+        <div class="owner">{{item.owner}}<span ng-if="!item.owner" class="whiteSpace">-</span></div>
+        <div class="timestamp">{{item.timeStarted}}<span ng-if="!item.timeStarted" class="whiteSpace">-</span></div>
+        <div class="state">{{item.state}}<span ng-if="!item.state" class="whiteSpace">-</span></div>
+        <div class="tableprogressbox" ng-if="!(activeViewID === item.changelist || activeViewID === item.build)" sm-coverage-bar="{'maxwidth': 40, 'height': 25, 'borderwidth': 2, 'status': item.state, 'bordercolor':'#BABBBD', 'color': {'background':'#D9D7D8', 'success':'#507E3D', 'failure':'#C80112', 'running': '#679EDE'}, value: item.detail.metrics.summaryvalue}"></div>
+        <div class="tableprogressbox" ng-if="!(activeViewID === item.changelist || activeViewID === item.build)" sm-coverage-bar="{'maxwidth': 40, 'height': 25, 'borderwidth': 2, 'status': item.state, 'bordercolor':'#BABBBD', 'color': {'background':'#D9D7D8', 'success':'#507E3D', 'failure':'#C80112', 'running': '#679EDE'}, value: item.detail.build.summaryvalue}"></div>
+        <div class="tableprogressbox" ng-if="!(activeViewID === item.changelist || activeViewID === item.build)" sm-coverage-bar="{'maxwidth': 40, 'height': 25, 'borderwidth': 2, 'status': item.state, 'bordercolor':'#BABBBD', 'color': {'background':'#D9D7D8', 'success':'#507E3D', 'failure':'#C80112', 'running': '#679EDE'}, value: item.detail.unitTest.summaryvalue}"></div>
+        <div class="tableprogressbox" ng-if="!(activeViewID === item.changelist || activeViewID === item.build)" sm-coverage-bar="{'maxwidth': 40, 'height': 25, 'borderwidth': 2, 'status': item.state, 'bordercolor':'#BABBBD', 'color': {'background':'#D9D7D8', 'success':'#507E3D', 'failure':'#C80112', 'running': '#679EDE'}, value: item.detail.functionalTest.summaryvalue}"></div>
+    </div>
+    <div class="rowdetail" ng-if="activeViewID === item.changelist || activeViewID === item.build">
+        <div sm-metrics-report class="block sm-metrics" ng-show="true"></div>
+        <div sm-build-report class="block build"></div>
+        <div sm-unit-test-report class="block unit-test"></div>
+        <div sm-fuction-test-report class="block functional-test"></div>
+        <div sm-result-area class="block result-area"></div>
+    </div>
+</div>

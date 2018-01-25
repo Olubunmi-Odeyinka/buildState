@@ -1,0 +1,8 @@
+﻿
+<section data-ng-controller="stateCtrl">
+    <div class="sm-state-item header"><div class="changelist">Changelist/Build</div><div class="owner">Owner</div><div class="timestamp">TimeStarted</div><div class="state">State</div><div class="metrics tableprogressbox">Metrics</div><div class="build tableprogressbox">Build</div><div class="unit-test tableprogressbox">Unit Test</div><div class="functional-test tableprogressbox">Functional Test</div></div>
+
+    <div ng-repeat="item in runItems">
+        <div sm-state-item></div>
+    </div>
+</section>

@@ -1,0 +1,11 @@
+@import "variables";
+
+body {
+    font-family: $font-primary;
+    line-height: 100%;
+    color: black;
+    font-size: .8rem;
+    background-color: $bgcolor;
+    align-content: center; 
+}
+       

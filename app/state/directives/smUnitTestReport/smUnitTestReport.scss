@@ -1,0 +1,54 @@
+
+@import "../../../../styles/lib/bourbon/bourbon";
+@import "../../../../styles/lib/neat/neat";
+@import "../../../../styles/variables";
+
+div.sm-fuction-test-report, div.sm-unit-test-report{
+    //color: $blackText;
+
+    .progressbar{
+        .text{
+             color: $blackText;
+        }
+        .percentage{
+            padding-top: 5rem;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+        .bar{
+            height: 2rem;
+            svg{
+                margin-top: .4rem;
+            }
+        }   
+    }
+    .testpassed{
+        margin-top: 1.5rem;
+        
+        .value{
+            font-size: 2.0rem;
+        }
+        .label{
+            color: $blackText;
+            margin-top: .2rem;
+            font-size: .75rem;
+        }
+    }
+}
+
+ div.sm-unit-test-report{
+    .testpassed{
+        .value{
+            color: #ABBB74;
+            //margin-top: .8rem;
+        }
+        .label{
+            margin-top: .6rem;
+        }
+    }}
+div.sm-fuction-test-report{
+    .testpassed{
+        .value{
+            color: #A4964B;
+        }}}
+

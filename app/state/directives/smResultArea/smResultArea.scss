@@ -1,0 +1,139 @@
+
+@import "../../../../styles/variables";
+@import "../../../../styles/lib/bourbon/bourbon";
+@import "../../../../styles/lib/neat/neat";
+
+
+div.state-detail-remaining-space {
+    .label {
+        color: $blackText;
+        font-size: $medium;
+        margin: 1rem;
+    }
+       [class^="icon-"], [class*=" icon-"] {
+           display: none;
+           font-size: 1rem;
+       }
+
+    .result {
+        &.accepted{ 
+               color: #FBEFDE;
+            font-size: 1.5rem;
+             margin-top: 2rem;
+        }
+        &.complete{
+              color: $blackText;
+            font-size: 2rem;
+            margin-top: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        &.rejected{
+               color: $failcolor;
+            font-size: 1.2rem;
+            margin: 1rem;
+        }
+        &.running{
+            visibility: hidden;
+        }
+        &.pending{
+            visibility: hidden;
+        }
+    }
+
+     .action {
+        &.accepted{
+            display: block;
+                color: #E6DCA4;
+              font-size: 2rem;
+              margin-top: .5rem;
+             margin-bottom: 2rem;
+        }
+        &.complete{
+            visibility: hidden;
+        }
+        &.rejected{
+            font-size: 2rem;
+             line-height:2rem;
+           // padding-bottom: 2.5rem;
+        }
+        &.running{
+            visibility: hidden;
+        }
+        &.pending{
+            visibility: hidden;
+        }
+    }
+
+     .rectangle{
+           &.rejected, &.complete, &.accepted{
+             width:150px;
+             height:30px;
+             background:#5DBCD2;
+             margin-left:1.7rem;        
+        }
+        &.pending,  &.running{
+            display:none;
+           }
+      }
+
+     select{
+         display: none;
+          &.complete{
+             display: block;
+             margin: auto auto;
+         }
+     }
+
+       .deployed {
+          margin-top: -1.4rem;
+           color: white;
+        &.accepted{
+            font-size: 1.2rem;
+              @include outer-container;
+             @include span-columns(12);
+                .text{
+                    @include span-columns(8);
+                }
+                [class^="icon-"], [class*=" icon-"] {
+                    @include span-columns(4);
+                    padding-left: 2rem;
+                    width: 2rem;
+                }   
+        }
+        &.complete{
+             font-size: 1.2rem;
+           
+        }
+
+        &.rejected{
+            font-size: 1.2rem;
+            span{
+                padding-bottom: -2rem;
+            }
+        }
+        &.running{
+            visibility: hidden;
+        }
+        &.pending{
+            visibility: hidden;
+        }
+    }
+
+         .issuelist {
+        &.accepted{
+           visibility: hidden;
+        }
+        &.complete{
+           visibility: hidden;
+        }
+        &.rejected{
+            visibility: hidden;
+        }
+        &.running{
+            visibility: hidden;
+        }
+        &.pending{
+           visibility: hidden;
+        }
+    }
+}

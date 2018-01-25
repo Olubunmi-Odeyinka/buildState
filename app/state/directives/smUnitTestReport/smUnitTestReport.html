@@ -1,0 +1,15 @@
+﻿<div class="sm-unit-test-report" ng-class="{'goodvalue': item.detail.unitTest.run}">
+    <div class="reportheader">Unit Test</div>
+    <div  class="piechart quadboxbig" >
+        <div sm-pie-chart="item.detail.unitTest"></div>
+    </div>
+    <div class="testpassed quadboxsmall">
+        <div class="value">{{item.detail.unitTest.passed}}%</div>
+        <div class="label">test passed</div>
+    </div>
+    <div class="progressbar">
+        <div class="bar" sm-coverage-bar="{'maxwidth': 190, 'height': 33, 'color': {'background':'#F6CBB0', 'success':'#C7E0B6'}, value: item.detail.unitTest.coverage}"></div>
+        <div class="percentage">{{item.detail.unitTest.coverage}}%</div>
+        <div class="text">code covered</div>
+    </div>
+</div>
